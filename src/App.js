@@ -107,17 +107,16 @@ export default function App() {
 				/>
 			</div>
 			
-			{ countMakes > 0 ? (
+			{ countMakes > 0 &&
 				makes.map( make => { 
 					return <div className="ContainerRow">
 
 						{ handleCardMakes(make) }
 					</div>
 				})
-				):(
-					<Vehicles />
-				)
 			}
+			
+			<Vehicles />				
 		</div>
 	);
 };
